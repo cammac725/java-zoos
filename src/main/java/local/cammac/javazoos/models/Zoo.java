@@ -1,10 +1,16 @@
 package local.cammac.javazoos.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name = "zoos")
-public class Zoo {
+public class Zoo extends Auditable{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -12,6 +18,14 @@ public class Zoo {
 
     @Column(unique = true, nullable = false)
     private String zooname;
+
+    @OneToMany(mappedBy = "zoo", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnoreProperties(value = "zoo", allowSetters = true)
+    private List<Telephone> telephones = new ArrayList<>();
+
+    @OneToMany(mappedBy = "zoo", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnoreProperties(value = "zoo")
+    private Set<ZooAnimals> animals = new HashSet<>();
 
     public Zoo() {
     }
@@ -34,5 +48,13 @@ public class Zoo {
 
     public void setZooname(String zooname) {
         this.zooname = zooname;
+    }
+
+    public List<Telephone> getTelephones() {
+        return telephones;
+    }
+
+    public void setTelephones(List<Telephone> telephones) {
+        this.telephones = telephones;
     }
 }
