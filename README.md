@@ -104,7 +104,7 @@ Using the provided seed data, a successful application will return the follow da
 [
     {
         "zooid": 1,
-        "zooname": "Gladys Porter Zoo",
+        "zooname": "Gladys Porter ZooController",
         "telephones": [
             {
                 "phoneid": 1,
@@ -128,20 +128,20 @@ Using the provided seed data, a successful application will return the follow da
                     "animalid": 1,
                     "animaltype": "lion"
                 },
-                "incomingzoo": "Point Defiance Zoo"
+                "incomingzoo": "Point Defiance ZooController"
             },
             {
                 "animal": {
                     "animalid": 2,
                     "animaltype": "bear"
                 },
-                "incomingzoo": "Point Defiance Zoo"
+                "incomingzoo": "Point Defiance ZooController"
             }
         ]
     },
     {
         "zooid": 2,
-        "zooname": "Point Defiance Zoo",
+        "zooname": "Point Defiance ZooController",
         "telephones": [],
         "animals": [
             {
@@ -149,13 +149,13 @@ Using the provided seed data, a successful application will return the follow da
                     "animalid": 2,
                     "animaltype": "bear"
                 },
-                "incomingzoo": "Gladys Porter Zoo"
+                "incomingzoo": "Gladys Porter ZooController"
             }
         ]
     },
     {
         "zooid": 3,
-        "zooname": "San Diego Zoo",
+        "zooname": "San Diego ZooController",
         "telephones": [
             {
                 "phoneid": 5,
@@ -169,20 +169,20 @@ Using the provided seed data, a successful application will return the follow da
                     "animalid": 1,
                     "animaltype": "lion"
                 },
-                "incomingzoo": "Gladys Porter Zoo"
+                "incomingzoo": "Gladys Porter ZooController"
             },
             {
                 "animal": {
                     "animalid": 2,
                     "animaltype": "bear"
                 },
-                "incomingzoo": "Point Defiance Zoo"
+                "incomingzoo": "Point Defiance ZooController"
             }
         ]
     },
     {
         "zooid": 4,
-        "zooname": "San Antonio Zoo",
+        "zooname": "San Antonio ZooController",
         "telephones": [
             {
                 "phoneid": 4,
@@ -194,7 +194,7 @@ Using the provided seed data, a successful application will return the follow da
     },
     {
         "zooid": 5,
-        "zooname": "Smithsonian National Zoo",
+        "zooname": "Smithsonian National ZooController",
         "telephones": [],
         "animals": [
             {
@@ -202,28 +202,28 @@ Using the provided seed data, a successful application will return the follow da
                     "animalid": 7,
                     "animaltype": "turtle"
                 },
-                "incomingzoo": "San Diego Zoo"
+                "incomingzoo": "San Diego ZooController"
             },
             {
                 "animal": {
                     "animalid": 6,
                     "animaltype": "llama"
                 },
-                "incomingzoo": "Gladys Porter Zoo"
+                "incomingzoo": "Gladys Porter ZooController"
             },
             {
                 "animal": {
                     "animalid": 5,
                     "animaltype": "tiger"
                 },
-                "incomingzoo": "Gladys Porter Zoo"
+                "incomingzoo": "Gladys Porter ZooController"
             },
             {
                 "animal": {
                     "animalid": 1,
                     "animaltype": "lion"
                 },
-                "incomingzoo": "Gladys Porter Zoo"
+                "incomingzoo": "Gladys Porter ZooController"
             }
         ]
     }
@@ -238,7 +238,7 @@ Using the provided seed data, a successful application will return the follow da
 ```JSON
 {
     "zooid": 5,
-    "zooname": "Smithsonian National Zoo",
+    "zooname": "Smithsonian National ZooController",
     "telephones": [],
     "animals": [
         {
@@ -246,28 +246,28 @@ Using the provided seed data, a successful application will return the follow da
                 "animalid": 7,
                 "animaltype": "turtle"
             },
-            "incomingzoo": "San Diego Zoo"
+            "incomingzoo": "San Diego ZooController"
         },
         {
             "animal": {
                 "animalid": 6,
                 "animaltype": "llama"
             },
-            "incomingzoo": "Gladys Porter Zoo"
+            "incomingzoo": "Gladys Porter ZooController"
         },
         {
             "animal": {
                 "animalid": 5,
                 "animaltype": "tiger"
             },
-            "incomingzoo": "Gladys Porter Zoo"
+            "incomingzoo": "Gladys Porter ZooController"
         },
         {
             "animal": {
                 "animalid": 1,
                 "animaltype": "lion"
             },
-            "incomingzoo": "Gladys Porter Zoo"
+            "incomingzoo": "Gladys Porter ZooController"
         }
     ]
 }
@@ -284,7 +284,7 @@ DATA
 
 ```JSON
 {
-    "zooname": "Lambda Llama School Zoo",
+    "zooname": "Lambda Llama School ZooController",
     "telephones": [
             {
                 "phonetype": "OTHER",
@@ -300,13 +300,13 @@ DATA
             "animal": {
                 "animalid": 1
             },
-            "incomingzoo": "San Diego Zoo"
+            "incomingzoo": "San Diego ZooController"
         },
         {
             "animal": {
                 "animalid": 2
             },
-            "incomingzoo": "Gladys Porter Zoo"
+            "incomingzoo": "Gladys Porter ZooController"
         },
         {
             "animal": {
@@ -336,7 +336,7 @@ DATA
 
 ```JSON
 {
-    "zooname": "The Best Zoo",
+    "zooname": "The Best ZooController",
     "telephones": [
             {
                 "phonetype": "OTHER",
@@ -348,13 +348,13 @@ DATA
             "animal": {
                 "animalid": 3
             },
-            "incomingzoo": "San Diego Zoo"
+            "incomingzoo": "San Diego ZooController"
         },
         {
             "animal": {
                 "animalid": 5
             },
-            "incomingzoo": "Gladys Porter Zoo"
+            "incomingzoo": "Gladys Porter ZooController"
         },
         {
             "animal": {
