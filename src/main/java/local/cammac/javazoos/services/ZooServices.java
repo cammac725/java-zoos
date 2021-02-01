@@ -1,5 +1,12 @@
 package local.cammac.javazoos.services;
 
+import local.cammac.javazoos.models.Zoo;
+
+import java.util.List;
+
 public interface ZooServices {
 
+    List<Zoo> findAll();
+
+    Zoo findZooById(Long zooid);
 }
