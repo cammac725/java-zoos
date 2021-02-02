@@ -51,7 +51,7 @@ public class ZooServicesImpl implements ZooServices{
         // collections
         newZoo.getTelephones().clear();
         for (Telephone t : zoo.getTelephones()) {
-            Telephone newTelephone = new Telephone(t.getPhonenumber(), t.getPhonetype());
+            Telephone newTelephone = new Telephone(newZoo, t.getPhonenumber(), t.getPhonetype());
             newZoo.getTelephones().add(newTelephone);
         }
 
@@ -63,5 +63,29 @@ public class ZooServicesImpl implements ZooServices{
         }
 
         return zoorepos.save(newZoo);
+    }
+
+    @Transactional
+    @Override
+    public Zoo update(Zoo zoo, long zooid) {
+        Zoo currentZoo = findZooById(zooid);
+
+        if (zoo.getZooname() != null) {
+            currentZoo.setZooname(zoo.getZooname().toLowerCase());
+        }
+        if (zoo.getAnimals().size() > 0) {
+            currentZoo.getAnimals().clear();
+            for (ZooAnimals a : zoo.getAnimals()) {
+                Animal newAnimal = animalServices.findAnimalById(a.getAnimal().getAnimalid());
+                currentZoo.getAnimals().add(new ZooAnimals(currentZoo, newAnimal, null));
+            }
+        }
+        if (zoo.getTelephones().size() > 0) {
+            currentZoo.getTelephones().clear();
+            for (Telephone t : zoo.getTelephones()) {
+                currentZoo.getTelephones().add(new Telephone(currentZoo, t.getPhonetype(), t.getPhonenumber()));
+            }
+        }
+        return zoorepos.save(currentZoo);
     }
 }

@@ -24,7 +24,8 @@ public class Telephone extends Auditable{
     public Telephone() {
     }
 
-    public Telephone(String phonenumber, String phonetype) {
+    public Telephone(Zoo zoo, String phonenumber, String phonetype) {
+        this.zoo = zoo;
         this.phonenumber = phonenumber;
         this.phonetype = phonetype;
     }

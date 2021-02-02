@@ -11,4 +11,6 @@ public interface ZooServices {
     Zoo findZooById(Long zooid);
 
     Zoo save(Zoo zoo);
+
+    Zoo update(Zoo zoo, long zooid);
 }

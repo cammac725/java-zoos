@@ -68,6 +68,13 @@ public class ZooController {
     }
 
     // PATCH http://localhost:2021/zoos/zoo/4
+    @PatchMapping(value = "/zoo/{zooid}", consumes = "appication/json")
+    public ResponseEntity<?> updateZoo(
+            @RequestBody Zoo updateZoo,
+            @PathVariable long zooid) {
+        zooServices.update(updateZoo, zooid);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
     // DELETE http://localhost:2021/zoos/zoo/5
 
