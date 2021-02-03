@@ -77,5 +77,10 @@ public class ZooController {
     }
 
     // DELETE http://localhost:2021/zoos/zoo/5
+    @DeleteMapping(value = "/zoo/{zooid}")
+    public ResponseEntity<?> deleteUserById(@PathVariable long zooid) {
+        zooServices.delete(zooid);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
 }

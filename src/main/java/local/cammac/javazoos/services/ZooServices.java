@@ -13,4 +13,6 @@ public interface ZooServices {
     Zoo save(Zoo zoo);
 
     Zoo update(Zoo zoo, long zooid);
+
+    void delete(long zooid);
 }

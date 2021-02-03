@@ -88,4 +88,14 @@ public class ZooServicesImpl implements ZooServices{
         }
         return zoorepos.save(currentZoo);
     }
+
+    @Override
+    public void delete(long zooid) {
+        Zoo z = findZooById(zooid);
+        if (z != null) {
+            zoorepos.deleteById(zooid);
+        } else {
+            throw new EntityNotFoundException("Zoo id " + zooid + " not found");
+        }
+    }
 }
